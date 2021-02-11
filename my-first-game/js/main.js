@@ -110,11 +110,15 @@ class MyScene extends Phaser.Scene {
             physicsImage.setVelocity(Phaser.Math.RND.integerInRange(75, 150), -300);
         }, this);
 
-        /*
-        this.input.keyboard.on('keyup-D', function(event){
-            this.image.x += 10;
+        
+        this.input.keyboard.on('keyup-P', function(event){
+            this.gameMusic.pause();
         }, this);
-        */
+        
+        this.input.keyboard.on('keyup-O', function(event){
+            this.gameMusic.play();
+        }, this);
+        
 
         this.input.on('pointerdown', function(event){
             this.image.x = event.x;
