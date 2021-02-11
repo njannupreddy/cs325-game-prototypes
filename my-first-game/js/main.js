@@ -20,37 +20,160 @@ class MyScene extends Phaser.Scene {
     }
     
     preload() {
-        // Load an image and call it 'logo'.
-        this.load.image( 'logo', 'assets/hercule.jpg' );
+        this.load.image( 'sky', 'assets/sky.png')
+        this.load.image( 'court', 'assets/court.png');
+        this.load.image( 'portal', 'assets/portal.png');
+        this.load.image( 'player', 'assets/player.png' );
+        this.load.image( 'basketball', 'assets/basketball.png');
+        
+        this.load.spritesheet('explosion', 'assets/explosion2.png',{
+            frameWidth: 192,
+            frameHeight: 192
+        });
+
+        this.load.audio("explodeSound", "assets/explodeSound.mp3");
+        this.load.audio("gameOverSound", "assets/gameOverSound.mp3");
+        this.load.audio("gameOverMusic", "assets/gameOverMusic.mp3");
+        this.load.audio("gameMusic", "assets/dreamscape.mp3");
     }
     
     create() {
-        // Create a sprite at the center of the screen using the 'logo' image.
-        this.bouncy = this.physics.add.sprite( this.cameras.main.centerX, this.cameras.main.centerX, 'logo' );
+        this.skyIm = this.add.image(400, 100, 'sky');
+        this.skyIm.setScale(3.2);
         
-        // Make it bounce off of the world bounds.
-        this.bouncy.body.collideWorldBounds = true;
+        this.courtIm = this.add.image(400, 410, 'court');
+        this.courtIm.setScale(3.5);
         
-        // Make the camera shake when clicking/tapping on it.
-        this.bouncy.setInteractive();
-        this.bouncy.on( 'pointerdown', function( pointer ) {
-            this.scene.cameras.main.shake(500);
-            });
+        this.portals = this.physics.add.group();
+        this.portalSprite = this.physics.add.sprite(100, 570, 'portal').setImmovable(true);
+        this.portalSprite.body.setAllowGravity(false);
+        this.portalSprite.setScale(0.5);
         
-        // Add some text using a CSS style.
-        // Center it in X, and position its top 15 pixels from the top of the world.
-        let style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-        let text = this.add.text( this.cameras.main.centerX, 15, "Hello, Nirav", style );
-        text.setOrigin( 0.5, 0.0 );
+        this.image = this.add.sprite(400, 300, 'player');
+
+        this.anims.create({
+            key: "explode",
+            frames: this.anims.generateFrameNumbers("explosion"),
+            frameRate: 20,
+            repeat: 0,
+            hideOnComplete: true
+          });
+        
+        this.explodeSound = this.sound.add("explodeSound");
+        this.gameOverSound = this.sound.add("gameOverSound");
+        this.gameOverMusic = this.sound.add("gameOverMusic");
+        this.gameMusic = this.sound.add("gameMusic");
+        var musicConfig = {
+            mute: false,
+            volume: 1,
+            rate: 1,
+            detune: 0,
+            seek: 0,
+            loop: true,
+            delay: 0
+        }
+        this.gameMusic.play(musicConfig);
+
+        this.counter = 0;
+        this.points = 0;
+
+        this.style = { font: "25px Verdana", fill: "0xff0000", align: "center" };
+        this.text = this.add.text( this.cameras.main.centerX, 15, "Points: " + this.points, this.style );
+        this.text.setOrigin( 0.5, 0.0 );
+
+        //this.portalSprite.animations.add('flash', [0,1,2,3,2,1,0], 24, false);
+
+        this.balls = this.physics.add.group();
+
+        this.input.keyboard.on('keyup-Z', function(event){
+            this.counter += 1;
+            if(this.counter == 3){
+                this.gameMusic.pause();
+                this.gameOverMusic.play();
+                this.gameOverSound.play();
+            }
+            var physicsImage = this.physics.add.sprite(this.image.x, this.image.y, "basketball");
+            this.balls.add(physicsImage);
+            physicsImage.setVelocity(Phaser.Math.RND.integerInRange(-150, -75), -300);
+        }, this);
+
+
+        this.input.keyboard.on('keyup-X', function(event){
+            this.counter += 1;
+            if(this.counter == 3){
+                this.gameMusic.pause();
+                this.gameOverMusic.play();
+                this.gameOverSound.play();
+            }
+            var physicsImage = this.physics.add.sprite(this.image.x, this.image.y, "basketball");
+            this.balls.add(physicsImage);
+            physicsImage.setVelocity(Phaser.Math.RND.integerInRange(75, 150), -300);
+        }, this);
+
+        /*
+        this.input.keyboard.on('keyup-D', function(event){
+            this.image.x += 10;
+        }, this);
+        */
+
+        this.input.on('pointerdown', function(event){
+            this.image.x = event.x;
+            this.image.y = event.y;
+        }, this);
+
+        this.key_A = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
+        this.key_S = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
+        this.key_W = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
+        this.key_D = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
+
+        this.physics.add.overlap(this.portalSprite, this.balls, this.hitSprite, null, this);
     }
     
-    update() {
-        // Accelerate the 'logo' sprite towards the cursor,
-        // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
-        // in X or Y.
-        // This function returns the rotation angle that makes it visually match its
-        // new trajectory.
-        this.bouncy.rotation = this.physics.accelerateToObject( this.bouncy, this.input.activePointer, 500, 500, 500 );
+    hitSprite (portalSprite, physicsImage){
+        physicsImage.disableBody(true, true);
+        this.explodePortal(portalSprite);
+        this.counter = 0;
+        this.points += 1;
+        //let style = { font: "25px Verdana", fill: "0xff0000", align: "center" };
+        this.text.destroy();
+        this.text = this.add.text( this.cameras.main.centerX, 15, "Points: " + this.points, this.style );
+        this.text.setOrigin( 0.5, 0.0 );
+    }
+
+    explodePortal (portal){
+        portal.disableBody(true, true);
+        var explosionImage = this.physics.add.sprite(portal.x, portal.y, "explosion");
+        explosionImage.play("explode");
+        this.explodeSound.play();
+        //portal.setTexture("explosion");
+        //portal.play("explode");
+        //portal.disableBody(true, true);
+        this.portalSprite = this.physics.add.sprite(Phaser.Math.RND.integerInRange(50, 700), 570, 'portal').setImmovable(true);
+        this.portalSprite.body.setAllowGravity(false);
+        this.portalSprite.setScale(0.5);
+        this.physics.add.overlap(this.portalSprite, this.balls, this.hitSprite, null, this);
+    }
+
+    disablePortal (portal){
+        portal.disableBody(true, true);
+    }
+
+    update(delta) {
+        if(this.key_A.isDown)
+            this.image.x -= 2;
+        if(this.key_S.isDown)
+            this.image.y += 2;
+        if(this.key_D.isDown)
+            this.image.x += 2;
+        if(this.key_W.isDown)
+            this.image.y -= 2;
+        if(this.counter == 3){
+            this.physics.pause();
+            this.image.setTint(0xff0000);
+            let overStyle = { font: "75px Impact", fill: "0xff0000", align: "center" };
+            let gameOver = this.add.text(this.cameras.main.centerX, 15, "GAME OVER", overStyle);
+            gameOver.setOrigin( 0.5, -1.5 );
+        }
     }
 }
 
@@ -59,6 +182,11 @@ const game = new Phaser.Game({
     parent: 'game',
     width: 800,
     height: 600,
-    scene: MyScene,
-    physics: { default: 'arcade' },
+    physics: { 
+            default: 'arcade',
+            arcade: {
+                gravity: {y : 200}
+            } 
+    },
+    scene: MyScene
     });

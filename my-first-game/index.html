@@ -19,72 +19,102 @@ body
 <body>
 <div id="game"></div>
 <div id="readme">
-<h2>Your game title</h2>
+<h2>Air Portal</h2>
 
 <ul>
 <li><strong>Originality:</strong>
-What is original about your game?
+I think the concept of my game is very original. Shooting basketballs into portals is a fun idea that I've never really seen before. 
+I also think the slight randomness of the shots is unique as well. Most games allow players to determine exactly where their shots will go.
+However, in this game there is a slight randomness to it that makes it unique and fun. 
 </li>
 
 <li><strong>Technical Merit:</strong>
-What is interesting about your game technology?
+The game has a few strong technical aspects.
+For one, there is collision detection. Every time the ball collides with a portal, it is detected, and there is a subsequent action that takes place.
+Another cool technical aspect, was the additon of physics and gravity. Gravity plays a heavy part in the game, as every basketball that is shot is affected by gravity.
+Players must position themselves appropriately to make sure they can adhere to the rules of gravity as a shot goes up. 
+Finally, animations are used in the game. When a ball collides with a portal, the portal disappears and in it's place, an explosion animation is played.
+This adds to the immersion and visual appeal of the game as a whole. 
+Other fun technical aspects include, audio/sounds upon collisions and game over.
 </li>
 
 <li><strong>Prototype Postmortem:</strong>
-What did you learn from this prototype?
-What was the easiest or hardest part of making it?
+I learned a lot about the basics of JavaScript and Phaser. I was completely unfamiliar with these technologies, so this first prototype allowed me to get comfortable with them.
+I especially learned a lot about how difficult making a game actually is. I had to take every little thing into consideration and it gave me a new appreciation for game developers.
+The easiest part for me was coming up with the game concept and mechanics. I was able to immediately come up with an idea that I liked and thought would be fun to play and create.
+The hardest part was actually implementing my idea. Because I was so unfamiliar with JavaScript, Phaser, and game development in general, it took a long time before I felt like I was really making progress.
+I had issues with JavaScript's syntax from time to time, and it was also a little overwhelming when I was learning about all of Phaser's functionality.
+However, I was able to get through it and see my game come to life.
 </li>
 
 <li><strong>Prototype Assets:</strong>
-Did you make your prototype assets from scratch? Did you borrow them? Cite your sources here.
+All my prototype assets were found online from royatly free sources.
 <ul>
-<li>Bouncing Phaser image: <a href="https://phaser.io/download/logo">Phaser logo</a></li>
+<li>Player image: <a href="https://opengameart.org/sites/default/files/styles/medium/public/oilman-side-sneak.0000.png">Player</a></li>
+<li>Basketball image: <a href="https://opengameart.org/sites/default/files/styles/medium/public/Koripallo.png">Basketball</a></li>
+<li>Basketball Court Background image: <a href="https://opengameart.org/sites/default/files/styles/medium/public/expfence_0.png">Court</a></li>
+<li>Sky Background image: <a href="https://opengameart.org/sites/default/files/styles/medium/public/sky1.png">Sky</a></li>
+<li>Portal image: <a href="https://opengameart.org/sites/default/files/styles/medium/public/1433015155310.png">Portal</a></li>
+<li>Explosion spritesheet: <a href="https://ansimuz.itch.io/phaser-3-tutorial-part-9-collisions">Explosion</a></li>
+<li>All Sound Effects: <a href="https://www.zapsplat.com/">Sound Effects</a></li>
+<li>Background Music: <a href="https://www.youtube.com/watch?v=KvDcTXEfdVs&list=PLwJjxqYuirCLkq42mGw4XKGQlpZSfxsYd&index=20">Music</a></li>
 </ul>
 </li>
 
 <li><strong>Prototype Closest Other Game:</strong>
-Which other game most closely resembles your game? If you are borrowing code from a Phaser Example, you must say so here. If you borrow code from elsewhere, you must say so here.
+A game that resembles my game would be Rivals. Rivals is a basketball game where you face off against someone else and aim your shot trajectory to get more points than your opponent.
+<ul>
+<li>Borrowed slightly for collisions: <a href="https://phaser.io/examples/v3/view/physics/arcade/sprite-overlap-group">Collision</a></li>
+<li>Borrowed for gravity stuff: <a href="https://www.youtube.com/watch?v=7cpZ5Y7THmo">Gravity</a></li>
+</ul>
 </li>
 
 <li><strong>High Concept:</strong>
-A one-sentence summary of your game.
+In this game you use your basketball shooting skills to destroy portals until you run out of balls to shoot.
 </li>
 
 <li><strong>Theme:</strong>
-State which of the Storymatic themes you used.
+The theme of my game is sci-fi basketball. I drew some inspiration from the movie Space Jam, where there's a sci-fi element added to basketball.
+This is where my idea to add in portals came in. Shooting a basketball to destroy a portal just seemed like a really fun idea to me, and it reminded me a lot of Space Jam.
 </li>
 
 <li><strong>Mandated Variety:</strong>
-State which input, randomness, genre, and play style you used in this prototype.
+This game consists of direct input with the keyboard and (optionally) the mouse. The game also has a lot of randomness in terms of where portals will appear and the trajectory that a ball will take.
+The play style would really appeal to competitors and achievers. The genre of the game is arcade-style. 
 </li>
 
 <li><strong>Prototype Goal:</strong>
-What game mechanic is this prototype evaluating?
+This protoype is evaluating the shooting game mechanic with gravity and collisions with portals.
 </li>
 
 <li><strong>Player Experience Goals:</strong>
-What experience do you want players to have when playing your game?
+I want players to feel like they're playing a fun arcade-style game. I modeled the game to be like some of the mobile games that I used to play in middle school when I wanted a short break from class.
+I want players to feel the same sense of fun and relief from playing this game for a short time.
 </li>
 
 <li><strong>Gameplay:</strong>
-A paragraph describing the actions the player can perform, the system dynamics, and the core mechanic. Include a concise explanation of the prototype’s inputs and their expected effects (how to play). You can also describe game play that is not in the prototype. You may include mock-up images for parts of the game not in the prototype.
+The point of this game is to destroy as many portals as you can by shooting basketballs. To shoot a basketball to the left, press the z key. To shoot a basketball to the right, press the x key.
+The player can move using the w-a-s-d keys (w move up, a move rightt, s move down, d move up). Another way to move is by using the mouse to click on a certain spot to immediately move there.
+The player will have two basketballs to shoot for each portal. If a third basketball is shot, the game is automatically over, so make sure to hit the portal with your first two shots!
+If you manage to destroy a portal, you will earn a point, and another portal will appear. This will continue on until you miss two shots in a row.
 </li>
 
 <li><strong>Strategies:</strong>
-What player strategies do you expect will be effective at playing this game?
+One strategy that should be effective is first figuring out the range of the shots. At first the shots may seem to go in random places, but there is actually a certain range for how far they can land.
+If players can figure this range out, they can easily position themselves with the best chance to hit the portal on each turn. Learning the range of shots is the most important part of this game, and players that do eventually learn it will have an advantage.
 </li>
 
 <li><strong>Story/Setting/Premise:</strong>
-A paragraph about the world your game is set in and who the characters are. What makes the game world and its occupants unique and interesting? Do the tokens represent something? If the game has a backstory, mention it here. If the game is abstract, then say so.
-How will the dramatic tension interact with the gameplay tension?
+It's just another normal day shooting hoops -- or so you thought. Portals to other dimensions have suddenly appeared and are threatening to destroy your court!
+It's up to you to take control and destory these portals before they become too much for your court to handle. Prove that you're the king of these courts and that nothing -- not even inter-dimensional portals -- can stop you.
 </li>
 
 <li><strong>Target Audience:</strong>
-A single sentence that describes the demographic you're trying to reach.
+This game is meant for people that are fans of fast-paced mobile and arcade-style games.
 </li>
 
 <li><strong>Play Time:</strong>
-How long does your game take to play?
+The game varies in time, depending on how far players are able to go. However, one round of the game should typically be completed in a few minutes at most.
 </li>
 
 </ul>
