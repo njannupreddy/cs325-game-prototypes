@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Protect The Kingdom</title>
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Protect The Kingdom</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+The game's originality comes from a concept that I haven't seen in many games before. The basis of this concept is having a central kingdom that the player must protect from incoming enemies.
+However, the player must also go out and defeat the enemies to advance to the next round. This decision between attacking and defending is crucial, and something that I think adds to both the fun and originality of the game.
+</li>
+
+<li><strong>Technical Merit:</strong>
+One major technical aspect of the game comes from collision detection. All enemies are capable of bouncing off the worlds boundaries.
+Also there are many separate functions that were implemented to give instructions on what actions should be taken depending on what type of collision occurs.
+Another technical aspect that is heavily used is the inclusion of animations. There are exploding animations that occur either when blobs are destroyed, or when the kingdom is destroyed.
+There are also many sound effects that are played when certain actions occur. If I had more time, I would've added a running animation for the knight as well.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+From this prototype I was able to expand my knowledge on collisions. I learned how to implement separate functions to take subsequent actions for certain collisions.
+I also became more familiar with phaser physics, which I know will be extremely useful for my next games. I also got to spend a ton of time researching and learning more about animations.
+The hardest part when creating this game was trying to get the collisions right. I had some trouble with setting it up correctly and ran into plenty of errors.
+However, I was able to figure it out and now I'm more comfortable with it.
+The easiest part was coming up with an idea for the game. I knew exactly what I wanted to make from the very beginning of the week. 
+</li>
+
+<li><strong>Prototype Assets:</strong>
+All my prototype assets were found online from royatly free sources.
+<ul>
+<li>Knight image: <a href="https://opengameart.org/content/knight-sprite">Knight</a></li>
+<li>Blob image: <a href="https://opengameart.org/content/purple-slime-blob">Blob</a></li>
+<li>Castle image: <a href="https://opengameart.org/content/castle-2d">Castle</a></li>
+<li>Explosion spritesheet: <a href="https://ansimuz.itch.io/phaser-3-tutorial-part-9-collisions">Explosion</a></li>
+<li>All Sound Effects: <a href="https://www.zapsplat.com/">ZapSplat</a> and <a href="https://soundbible.com/">Sound Bible</a></li>
+<li>Background Music: <a href="https://www.youtube.com/watch?v=0ezmcPkdxPU">Music</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+My game closely resembles games like capture the flag. In this game you must go out to defeat the enemy but risk leaving yourself defenseless, similar to how capture the flag works as a concept.
+<ul>
+<li>Borrowed code for collisions: <a href="https://phaser.io/examples/v3/view/physics/arcade/sprite-overlap-group">Collision</a></li>
+<li>Borrowed Phaser 2 code for collisions (converted to Phaser 3): <a href="https://phaser.io/examples/v2/arcade-physics/on-collide-event">More Collisions</a></li>
+</ul>
+</li>
+
+<li><strong>High Concept:</strong>
+In this game you must protect your kingdom from enemies, while also trying to defeat them?
+</li>
+
+<li><strong>Theme:</strong>
+The theme of this game was inspired by the anime Black Clover. In the show there's a riot in the capital city where a bunch of zombies attack.
+I based this off the same idea where the purple blobs attack and you as the knight, must protect the kingdom. 
+</li>
+
+<li><strong>Mandated Variety:</strong>
+This game consists of direct input with the keyboard. The game also has a lot of randomness in terms of where the blobs will go and what speed they'll move at.
+The play style would really appeal to achievers, performers, and jokers. The genre of the game is arcade-style. 
+</li>
+
+<li><strong>Prototype Goal:</strong>
+This protoype is mainly evaluating collisions and the subsequent actions that occur.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+I want players to feel like they're playing a fun arcade-style game. I modeled the game to be really fast-paced and quick so players won't be engaged for too long.
+I wanted it to be a fun challenge for players that would give them a sense of accomplisment when they finally beat the game.
+</li>
+
+<li><strong>Gameplay:</strong>
+To start the game press P. The point of this game is to destroy all enemy blobs before they're able to destroy you're castle. The player can destroy a blob by making contact with it.
+However, players must be careful when attacking, as if they leave the castle unattended, an enemy blob can destroy it by making contact with it.
+The objective is to get through all threee rounds of the game by defeating all enemy blobs and keeping the castle untouched. Each round will get increasingly difficult.
+The standard w-a-s-d keys are for movement.
+</li>
+
+<li><strong>Strategies:</strong>
+I think the best strategy for this game is to stay near the castle at all times and wait for enemies to come to you. This way, you can defend the castle while also slowly picking off enemies.
+Another strategy that may work would be to go out and quickly try to destroy all the blobs. However, this may be risky as it will leave the castle vulnerable.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+The peace of the kingdom is being threatened by evil blobs! You as a royal knight must step up to the plate and fend off these blobs as they try to destroy your kingdom.
+The people are depending on you, so don't disappoint!
+</li>
+
+<li><strong>Target Audience:</strong>
+This game is meant for people that are fans of fast-paced mobile and arcade-style games.
+</li>
+
+<li><strong>Play Time:</strong>
+The full game will take at most one minute to complete.
+</li>
+
+</ul>
+</div>
+
+<!-- main.js must come at the end since it expects the HTML to have been created. -->
+<script src="js/main.js" type="module"></script>
+</body>
+</html>
