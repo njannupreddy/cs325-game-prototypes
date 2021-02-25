@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pirate King</title>
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Pirate King</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+I feel like my game is very original. I can't really think of any games with the same concept as mine. I would classify it as a memory game.
+Players only have a 20 seconds to look at the treasure map before they set off and look for the correct chests.
+The originality really comes with the idea of the treasure chest and how you can only look at it for a certain period of time before opening chests.
+Memory skills are required here as to decide whether or not to open a certain chest. It was a completely original idea and this is evidenced by the fact that I created my own original tilemap, created my own original treasure map image, and designed original buttons for this game.
+</li>
+
+<li><strong>Technical Merit:</strong>
+I think the strongest technical aspect comes with the tilemap. I had to create this from scratch and it took me quite a while to figure out how to implement with collisions.
+I created the tilemap using an applicaton called Tiled. It was my first time using it, so it was a little difficult to adjust, but eventually I was able to implement the map that I wanted and it turned out great.
+This time I also included many different animations. I implemented a walking animation for the playable pirate captain, as well as multiple chest animations for when a player decides to open or destroy it.
+There's also an in-game timer that gives the player 20 seconds to view the treasure map at the beginning of the game before the map disappears.
+I was also able to implement clickable buttons into the game, which ask the player to choose between opening or destroying a chest. These buttons trigger certain actions and animations to be played as well.
+There were also sounds that played on certain animations, treasure counter text, and text that pops up based on certain actions.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+I learned a lot from making this game. First I learned how to make tilemaps and how useful they could be for my game. The tilemap made it much easier to design my level and it'll be a tool I use in the future.
+Another thing I learned is that third-party applications are very useful. For this game, I used Tiled and Pixlr for certain designs and art.
+Tiled was a great tool to create and export a tilemap for my game, and Pixlr was great for designing my own art (such as the treasure map and the buttons).
+I also learned that designing my own art would be really helpful. I really felt like I was taking control over my own game design and I'll be doing more of it.
+The hardest part was when I had to implement the tilemap. I ran into a learning curve with Tiled and even after that, it took me a while to get it imported into Phaser and figure out how to get collision working with it.
+The easiest part was setting up player movement, as I've become really accustomed to it by now.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+All my prototype assets were found online from royatly free sources.
+<ul>
+<li>Pirate Captain image: <a href="https://opengameart.org/content/animated-pirate-captain">Pirate Captain</a></li>
+<li>Blank Map image: <a href="https://opengameart.org/content/map">Blank Map</a></li>
+<li>Tile image: <a href="https://opengameart.org/content/crate-tile">Tile</a></li>
+<li>Gold Skull image: <a href="https://opengameart.org/content/gold-skull">Gold Skull</a></li>
+<li>Light Flash image: <a href="https://opengameart.org/content/alotofimpacts-5-frame-quick-hit-impacts-muzzle-flashs-4colors-impacts016-019">Light Flash</a></li>
+<li>Explosion image: <a href="https://ansimuz.itch.io/phaser-3-tutorial-part-9-collisions">Explosion</a></li>
+<li>All Sound Effects: <a href="https://soundbible.com/">Sound Bible</a></li>
+<li>Background Music: <a href="https://www.youtube.com/watch?v=iTVxFPhbAtk">Music</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+My game most resembles memory games where you're shown something and need to reference that information at a later time. There are mini-games in bigger games that somewhat resemble this.
+<ul>
+<li>Borrowed code from: <a href="https://phaser.io/examples/v2/category/buttons">Buttons</a></li>
+<li>Borrowed small snippet from here: <a href="https://phaser.discourse.group/t/phaser-3-arcade-physics-tilemap-collision/6091">Tilemap Collisions</a></li>
+</ul>
+</li>
+
+<li><strong>High Concept:</strong>
+You're on the final island, and on the verge of becoming the pirate king. Can you find the treasure and vault yourself into the ranks of the greatest pirates in history?
+</li>
+
+<li><strong>Theme:</strong>
+I used the pirate theme for this game.
+</li>
+
+<li><strong>Mandated Variety:</strong>
+This game uses direct clickable buttons, direct input, mouse and keyboard input. This game is also very deterministic with no randomness.
+The games play styles are explorer and collector. This game is in the overhead and adventure genres.
+</li>
+
+<li><strong>Prototype Goal:</strong>
+This protoype is mainly evaluating the level design, specifically how well the tilemap matches the original treasure map.
+It's also evaluating the core game mechanic of memorizing the map and finding the correct chests.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+I want players to use their head in this game. They need to be focused at all times to make sure that they don't make a mistake on the chests.
+This intense focus will hopefully lead to immense relief and pride after beating the game.
+</li>
+
+<li><strong>Gameplay:</strong>
+The player will be shown a treasure map for 20 seconds to start the game. The player must try to memorize the map and find the locations of the correct chests.
+There are multiple incorrect chests all around the map as well. The player must be careful to not open those chests, as they are booby trapped. 
+If the player opens a booby trapped chest, the player will die and the game is over. There are five correct chests around the map and player must find all of them to win.
+Movement is done with the standard w-a-s-d keys. When a player encounters a chest, two buttons will appear. One is a button to open the chest, and the other is a button to destroy the chest.
+The player must aim to destroy any incorrect chests they encounter and open any correct chests that they encounter. If the player destroys a correct chest, the game is over.
+The player wins if they find all five correct chests.
+</li>
+
+<li><strong>Strategies:</strong>
+The best strategy is to really focus at the start of the game and make sure you mentally note down where the chests are. Another strategy is to analyze the actual map and compare it to the treasure map. 
+This way, they can find where the correct chests are located.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+You and your crew have made it so far. You've fought your way through other crews and recovered many treasures.
+However, now is your chance to truly leave your mark on history. You've washed ashore on the fabled Final Island, where the greatest treasure of all exists.
+If you recover this treasure, you'll undoubtedly be acknowledged as the King of the Pirates! However, you've been separated from your crew and it is now your task as the Captain to recover the treasure and become the one and only Pirate King!
+</li>
+
+<li><strong>Target Audience:</strong>
+The target audience is players that like to really think while they play games.
+</li>
+
+<li><strong>Play Time:</strong>
+One round will take no longer than a couple minutes.
+</li>
+
+</ul>
+</div>
+
+<!-- main.js must come at the end since it expects the HTML to have been created. -->
+<script src="js/main.js" type="module"></script>
+</body>
+</html>
