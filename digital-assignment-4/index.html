@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Air Portal</title>
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Air Portal</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+I think the concept of my game is very original. Shooting basketballs into portals is a fun idea that I've never really seen before. 
+I also think the slight randomness of where the portals show up is unique as well. 
+A new aspect that was an original idea, was with the timers. I thought it would be great to add a sense of pressure for players while they play. 
+The game contains of mix of randomess and determisitic outcomes (randomness from where the portals show up, and determisitic outcomes from how each portal has the same amount of time until it kills the player).
+I think this mix adds a lot of originality to the game and makes it a lot more fun to play than it originally (all randomess) was.
+I changed the concept of the original game by always having five portals in the game. However, the player must look at the timers to prioritize portal attacks. If a portal timer reaches 1.0 (12 seconds) then the game is over.
+</li>
+
+<li><strong>Technical Merit:</strong>
+(New Technical Aspects): One major thing that was changed was the player sprite. This time I went with spritesheets so that I could implement animations.
+I implemented a walking animation for moving around, and also implemented a shooting animations for when the player shoots a basketball (two separate spritesheets).
+Another thing that was added was with timers. I added timers for each portal to determine how long until it triggers a game over. I set up a game over function that is triggered when a timer reaches it's end.
+I also changed the motion of the ball, by making it move in a straight line after the shot animation is triggered. This was to make it easier for players to hit portals, as in my previous iteration the shots were slightly random.
+I also removed the mouse input movement system, as it made it too easy to destroy portals.
+(Old Technical Aspects): The game has a few strong technical aspects.
+For one, there is collision detection. Every time the ball collides with a portal, it is detected, and there is a subsequent action that takes place.
+Another cool technical aspect, was the additon of physics and gravity. Gravity plays a heavy part in the game, as every basketball that is shot is affected by gravity.
+Players must position themselves appropriately to make sure they can adhere to the rules of gravity as a shot goes up. 
+Finally, animations are used in the game. When a ball collides with a portal, the portal disappears and in it's place, an explosion animation is played.
+This adds to the immersion and visual appeal of the game as a whole. 
+Other fun technical aspects include, audio/sounds upon collisions and game over.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+I learned a lot about the process of iterating on games. I learned that it was ok to go back and delete/replace certain aspects of a previous game.
+I was really reluctant at first when taking certain features out, but I quickly learned that it was necessary to improve my game.
+The hardest part was thinking about what I could do to improve my game and make it more fun to play. I spent hours thinking of features to add that would make the game better.
+The easiest part was implementing the animations, as I've become used to it as this point.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+All my prototype assets were found online from royatly free sources.
+<ul>
+<li>Player image: <a href="https://opengameart.org/sites/default/files/styles/medium/public/oilman-side-sneak.0000.png">Player</a></li>
+<li>New Player (Cat) image: <a href="https://opengameart.org/content/pixel-art-cat-doing-some-stuff">Cat Player</a></li>
+<li>Basketball image: <a href="https://opengameart.org/sites/default/files/styles/medium/public/Koripallo.png">Basketball</a></li>
+<li>Basketball Court Background image: <a href="https://opengameart.org/sites/default/files/styles/medium/public/expfence_0.png">Court</a></li>
+<li>Sky Background image: <a href="https://opengameart.org/sites/default/files/styles/medium/public/sky1.png">Sky</a></li>
+<li>Portal image: <a href="https://opengameart.org/sites/default/files/styles/medium/public/1433015155310.png">Portal</a></li>
+<li>Explosion spritesheet: <a href="https://ansimuz.itch.io/phaser-3-tutorial-part-9-collisions">Explosion</a></li>
+<li>Space Background image: <a href="https://www.freepik.com/free-vector/alien-planet-landscape-night-space-game_8470682.htm">Space Background</a></li>
+<li>All Sound Effects: <a href="https://www.zapsplat.com/">Sound Effects</a></li>
+<li>Background Music: <a href="https://www.youtube.com/watch?v=KvDcTXEfdVs&list=PLwJjxqYuirCLkq42mGw4XKGQlpZSfxsYd&index=20">Music</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+A game that resembles my game would be Rivals. Rivals is a basketball game where you face off against someone else and aim your shot trajectory to get more points than your opponent.
+<ul>
+<li>Borrowed slightly for collisions: <a href="https://phaser.io/examples/v3/view/physics/arcade/sprite-overlap-group">Collision</a></li>
+<li>Borrowed for gravity stuff: <a href="https://www.youtube.com/watch?v=7cpZ5Y7THmo">Gravity</a></li>
+<li>Borrowed for timers: <a href="https://labs.phaser.io/edit.html?src=src/time\timer%20event.js">Timers</a></li>
+</ul>
+</li>
+
+<li><strong>High Concept:</strong>
+In this game you must use your basketball shooting skills to destroy portals before they destroy you!
+</li>
+
+<li><strong>Theme:</strong>
+The theme of my game is sci-fi basketball. I drew some inspiration from the movie Space Jam, where there's a sci-fi element added to basketball.
+This is where my idea to add in portals came in. Shooting a basketball to destroy a portal just seemed like a really fun idea to me, and it reminded me a lot of Space Jam.
+</li>
+
+<li><strong>Mandated Variety:</strong>
+This game consists of direct input with the keyboard. The game also has a lot of randomness in terms of where portals will appear.
+While there is randomess, the game is also deterministic, as the amount of time for each timer is set at 12 seconds, and each shot will move the same way. 
+The play style would really appeal to competitors and achievers. The genre of the game is arcade-style. 
+</li>
+
+<li><strong>Prototype Goal:</strong>
+This protoype is evaluating the timed portals mechanic, as well as the movement and shooting mechanics for the player.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+I want players to feel like they're playing a fun arcade-style game. I modeled the game to be like some of the mobile games that I used to play in middle school when I wanted a short break from class.
+I want players to feel the same sense of fun and relief from playing this game for a short time.
+</li>
+
+<li><strong>Gameplay:</strong>
+The point of this game is to destroy as many portals as you can by shooting basketballs. To shoot a basketball to the left, press the z key. To shoot a basketball to the right, press the x key.
+The player can move using the w-a-s-d keys (w move up, a move left, s move down, d move right).
+The player can shoot as many basketballs as they want. There will always be five portals in the scene, each with a timer. The player must watch these timers, as if they let it hit 1.0 before destorying the portal, the game will be over.
+If you manage to destroy a portal, you will earn a point, and another portal will appear. This will continue on until a portal timer reaches 1.0. Game music can be turned off by pressing P, and turned back on by pressing O.
+</li>
+
+<li><strong>Strategies:</strong>
+The most effective strategy will be to target the portals with the least amount of time remaining. By doing this, the player can minimize the risk of losing, as other portals will not explode as quickly.
+Another possible strategy is to destroy whatever portals are closest to the player at the time. This strategy may work well if there are many portals near the player, but it will be risky, as there could be other portals that are about to time out.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+Take control of the Hooping Space Cat, as he defends the world from alien portals! You must destroy the portals in time, or the Hooping Space Cat will go down.
+If he goes down, there will be no one left to protect the planet from the impending alien invasion. Good luck!
+</li>
+
+<li><strong>Target Audience:</strong>
+This game is meant for people that are fans of fast-paced mobile and arcade-style games.
+</li>
+
+<li><strong>Play Time:</strong>
+The game varies in time, depending on how far players are able to go. However, one round of the game should typically be completed in less than a minute.
+</li>
+
+</ul>
+</div>
+
+<!-- main.js must come at the end since it expects the HTML to have been created. -->
+<script src="js/main.js" type="module"></script>
+</body>
+</html>
