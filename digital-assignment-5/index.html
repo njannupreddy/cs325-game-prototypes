@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Protect The Kingdom</title>
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Protect The Kingdom</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+New Originality Aspects:
+The biggest feature that has been added is power ups. The power ups add significantly to the originality of the game.
+The two power ups are slowing down time and shooting cannon balls. I think these power ups add a completely new dimension to the game that didn't exist before.
+The players must decide between trying to acquire a power up and staying back to protect the castle. The powerup will significantly improve chances of winning but acquiring might leave the castle vulnerable.
+It's a new original dimension that players must think about now. The power ups were completely original, as they were not taken from example code or external sources.
+I also changed the game from just 3 levels to 10 levels, with each level getting harder. 
+Old Originality Aspects:
+The game's originality comes from a concept that I haven't seen in many games before. The basis of this concept is having a central kingdom that the player must protect from incoming enemies.
+However, the player must also go out and defeat the enemies to advance to the next round. This decision between attacking and defending is crucial, and something that I think adds to both the fun and originality of the game.
+</li>
+
+<li><strong>Technical Merit:</strong>
+New Technical Merit:
+One big technical aspect was the addition of the power ups. It took some work to properly implement these.
+I had to take the time to make sure the player would receive the appropriate power up and could activate it when they pleased in the round.
+This took time to implement, as I had to make some major changes to the code that I previously had. None of the code was taken from an example, so I had to fully implement it.
+I also added animations to make the game more interesting. The knight now has a constant attack animation to make players feel like they're actually attacking the enemies.
+There is also a light flash animation when a power up is acquired. I also implemented a system to increase the enemy count as the player advanced through levels.
+Old Technial Merit:
+One major technical aspect of the game comes from collision detection. All enemies are capable of bouncing off the worlds boundaries.
+Also there are many separate functions that were implemented to give instructions on what actions should be taken depending on what type of collision occurs.
+Another technical aspect that is heavily used is the inclusion of animations. There are exploding animations that occur either when blobs are destroyed, or when the kingdom is destroyed.
+There are also many sound effects that are played when certain actions occur. If I had more time, I would've added a running animation for the knight as well.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+I learned a lot about how to make a game more interesting. I struggled with thinking of ways to improve the game, so I decided to think in the perspective of the player.
+From this I was able to think of many new ideas to make the game more fun and challenging. 
+The hardest part for me was implementing the power up system. I had to change a lot of my existing code and add in many functions to accomodate for the new system.
+It took a long time to do, but it was worth it, as it added a new dimension to the game.
+The easiest part was implementing a more interesting player sprite. I wanted a more dynamic sprite, so I implemented it using a spritesheet and animations.
+I've become used to doing this, so it was relatively easy.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+All my prototype assets were found online from royatly free sources.
+<ul>
+<li>Knight spritesheet: <a href="https://opengameart.org/content/skeleton-knight">Knight</a></li>
+<li>Blob image: <a href="https://opengameart.org/content/purple-slime-blob">Blob</a></li>
+<li>Castle image: <a href="https://opengameart.org/content/castle-2d">Castle</a></li>
+<li>Clock Powerup image: <a href="https://opengameart.org/content/clock">Clock</a></li>
+<li>Cannon Powerup image: <a href="https://opengameart.org/content/cannon">Cannon</a></li>
+<li>Explosion spritesheet: <a href="https://ansimuz.itch.io/phaser-3-tutorial-part-9-collisions">Explosion</a></li>
+<li>All Sound Effects: <a href="https://www.zapsplat.com/">ZapSplat</a> and <a href="https://soundbible.com/">Sound Bible</a></li>
+<li>Background Music: <a href="https://www.youtube.com/watch?v=0ezmcPkdxPU">Music</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+My game closely resembles games like capture the flag. In this game you must go out to defeat the enemy but risk leaving yourself defenseless, similar to how capture the flag works as a concept.
+</li>
+
+<li><strong>High Concept:</strong>
+In this game you must protect your the castle and rid the kingdom of all intruders.
+</li>
+
+<li><strong>Theme:</strong>
+The theme of this game was inspired by the show Black Clover. In the show there's a riot in the capital city where a bunch of zombies attack.
+I based this off the same idea where the purple blobs attack and you as the knight, must protect the kingdom. 
+</li>
+
+<li><strong>Mandated Variety:</strong>
+This game consists of direct input with the keyboard. The game also has a lot of randomness in terms of where the blobs will go and what speed they'll move at.
+The play style would really appeal to achievers, performers, and jokers. The genre of the game is arcade-style. 
+</li>
+
+<li><strong>Prototype Goal:</strong>
+This protoype is mainly evaluating the new power up system.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+I want players to feel like they're playing a fun arcade-style game. I modeled the game to be really fast-paced and quick so players won't be engaged for too long.
+I wanted it to be a fun challenge for players that would give them a sense of accomplisment when they finally beat the game.
+</li>
+
+<li><strong>Gameplay:</strong>
+To start the game press P. The point of this game is to destroy all enemy blobs before they're able to destroy you're castle. The player can destroy a blob by making contact with it.
+However, players must be careful when attacking, as if they leave the castle unattended, an enemy blob can destroy it by making contact with it.
+The objective is to get through all threee rounds of the game by defeating all enemy blobs and keeping the castle untouched. Each round will get increasingly difficult.
+The standard w-a-s-d keys are for movement. There is also two possible power ups that will appear throughout the game. There will be one powerup per round for the player to acquire.
+The first power up is siginified by a clock. This power up allows the player to slow down time for the entire round. The second power up is signified by a cannon.
+This power up allows the player to shoot cannon balls for the rest of the round (cannon balls will immediately destroy a blob on contact). The power ups will randomly appear on the screen at the beginning of each round.
+The player can acquire it by making contact with it. To use an acquired power up, the player must simply press the N key. The time power up can only be used once per round, while the cannon power up can be used infinitely.
+The player will lose their power up when they complete the round.
+</li>
+
+<li><strong>Strategies:</strong>
+I think the best strategy for this game is to stay near the castle at all times and wait for enemies to come to you. This way, you can defend the castle while also slowly picking off enemies.
+Another strategy that may work would be to go out and quickly try to destroy all the blobs. However, this may be risky as it will leave the castle vulnerable.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+The peace of the kingdom is being threatened by evil blobs! You as a royal knight must step up to the plate and fend off these blobs as they try to destroy your kingdom.
+The people are depending on you, so don't disappoint!
+</li>
+
+<li><strong>Target Audience:</strong>
+This game is meant for people that are fans of fast-paced mobile and arcade-style games.
+</li>
+
+<li><strong>Play Time:</strong>
+The full game will take at most two minutes to complete.
+</li>
+
+</ul>
+</div>
+
+<!-- main.js must come at the end since it expects the HTML to have been created. -->
+<script src="js/main.js" type="module"></script>
+</body>
+</html>
