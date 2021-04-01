@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Demon Fight</title>
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Demon Fight</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+For this game, I had several aspects of originality. First of all, I designed the game to be a two player game. I wanted it to be similar to analog game where one player tries to keep their distance, while the other tries to get closer.
+I wanted it to feel very intense, as if either player could be defeated at any moment. To do this, I added a few original ideas. One of these ideas was to give one player a gun(ranged weapon) and give the other player an axe(close combat weapon).
+In this way, each player would feel different and you would have to use a different strategy depending on which player you would choose. I made sure to balance the game, as it would seem unfair to give the axe and gun the same amount of power.
+To do this, I gave the axe player three health, while the gun player only gets one health. Another aspect of originality are the powerups. To make the game more interesting, I added powerups.
+A powerup for the axe player and gun player show up at a random time during the round. It then becomes a mental game, as you must decide whether or not to go pick up the powerup or not.
+If the other player picks up your powerup, it is immediately destroyed, so you must make a smart decision. Another aspect that I thought was original was how the power up gets used.
+The players can choose when to activate their powerups instead of having it activate immediately. This adds another layer of strategy, as picking the right time to use the powerup could mean the difference between winning and losing.
+For now there's only one powerup between the two players, but I planning on adding more and making them more interesting in my next iteration of the game.
+</li>
+
+<li><strong>Technical Merit:</strong>
+There was quite a lot of technical merit that went into this game. One of them was using gravity and platforms, which was something I had never done before.
+A big problem I had was bad hit boxes and collison detection. However, I figured out how to alter the hit boxes and make the game feel much smoother. I also added many more animations this time around.
+It took some time to properly implement these animations and alter their hit boxes as well, as this was also causing a problem. Another big technical aspect was the powerup management system.
+It took a while to implement this, as there had to be certain actions in place depending on whether a player had a powerup or not. 
+I found that managing the powerups were much harder than I thought they would be, as they required their own animations and actions that needed to take place. 
+I also added in a jump mechanic for this game, which I had never used before. I plan on expanding upon this powerup system and making it much more complex for the next iteration.
+This game is also a two player game, so that aspect added another technical challenge. I needed ways to manage both players at once and make sure they weren't messing one another.
+This proved to be a time consuming task, but it worked out well in the end.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+I learned a lot about balancing a game and making it fair for all players involved. This is the first multiplayer that I've made, so I needed to think a lot about balancing it out for both players.
+Throughout the process, I was able to figure out different tricks to make the game balanced and give each player an equal opportunity, while also making the players feel different from one another.
+The most difficult for me was finding a good balance between the two players. It felt like every time I made a change, the scale would tip too far in one direction.
+However, in the end I was able to balance it out to where I was satisfied.
+The easiest part was adding in sound effects, as I've become used to that now.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+All my prototype assets were found online from royatly free sources.
+<ul>
+<li>Shooting Player spritesheet: <a href="https://opengameart.org/content/pixel-art-space-cadet-sprites">Shooting Player</a></li>
+<li>Axe Player spritesheet: <a href="https://opengameart.org/content/minotaur-with-axe">Axe Player</a></li>
+<li>Platform image: <a href="https://opengameart.org/content/dirt-platform">Platform</a></li>
+<li>Heart image: <a href="https://opengameart.org/content/heart-2">Heart</a></li>
+<li>Powerup images: <a href="https://opengameart.org/content/pickup-hex-pack">Powerups</a></li>
+<li>Explosion spritesheet: <a href="https://ansimuz.itch.io/phaser-3-tutorial-part-9-collisions">Explosion</a></li>
+<li>Laser images: <a href="https://opengameart.org/content/3-lasers">Lasers</a></li>
+<li>All Sound Effects: <a href="https://www.zapsplat.com/">ZapSplat</a> and <a href="https://soundbible.com/">Sound Bible</a></li>
+<li>Background Music: <a href="https://www.youtube.com/watch?v=i0XOYj6lqNw">Music</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+My game is similar to Doom in terms of how it looks and how the players are portrayed. However, it's original in that it's multiplayer unlike Doom, and it gives both the shooter and demon equal strength.
+</li>
+
+<li><strong>High Concept:</strong>
+In this game you will face off against a friend a battle it out to the death!
+</li>
+
+<li><strong>Theme:</strong>
+I used the challenge of making the characters controlled by multiple players. The game's theme is inspired by Doom.
+</li>
+
+<li><strong>Mandated Variety:</strong>
+This game consists of direct input with the keyboard. The game is mostly deterministic, as players dicate where they move and when they want to attack.
+However, there is some randomness in where and when the powerups show up. This game would appeal to competitors, performers, and achievers.
+</li>
+
+<li><strong>Prototype Goal:</strong>
+This protoype is mainly evaluating the balance of power between the two players, and seeing if the game is a fair judge of skill.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+I want players to feel like their playing a high intensity game against another real player. Players should have difficult decisions to make in terms of when to attack and when to run.
+It should be very high intensity and quick to play.
+</li>
+
+<li><strong>Gameplay:</strong>
+The space guy moves by using the arrow keys, while the demon moves by using w-a-s-d. The up arrow and W keys allow the players to jump.
+The demon has three health, while the space player only has one. The demon wins by touching the space guy, which automatically triggers an axe slash.
+The space guy must use the M key to shoot at the demon, and each hit will decrease the demon's health by one.
+A powerup for each player will randomly appear on the screen at some point during the game. The red power up is for the demon and the blue one is for the space guy.
+If a player touches the opposing player's powerup, it will disappear and the other player won't be able to pick it up.
+If a player picks up their own power up, it can be activated once per game at any time by using the N key(for space guy) or E key(for demon).
+The power will rain lasers down on the opponent and will result in a one shot kill if the opponent is hit by it.
+</li>
+
+<li><strong>Strategies:</strong>
+The best strategy for the gun player is to keep your distance while firing shots constantly to keep the axe player away.
+For the axe player, the best strategy is to look for an opening while chasing the gun player. They also shoudln't stay at the same level as the gun player, as that'll most likely result in them getting shot.
+Jumping in from higher point to attack may also be a good way to win for the axe player.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+A man from Earth has entered into another dimension -- ruled by demons. The man must kill the demon king to stake his claim in this dimension and make his way back to Earth.
+For the demon, it's time to fend off intruders.
+</li>
+
+<li><strong>Target Audience:</strong>
+The target audience are players that are looking for a competitive, high-intesity multiplayer game to play with a friend.
+</li>
+
+<li><strong>Play Time:</strong>
+One round will take no longer than a minute to complete.
+</li>
+
+</ul>
+</div>
+
+<!-- main.js must come at the end since it expects the HTML to have been created. -->
+<script src="js/main.js" type="module"></script>
+</body>
+</html>
