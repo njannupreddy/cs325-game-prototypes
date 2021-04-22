@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>City Runner</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+This games originality comes from it's concept. The concept involves a punk running through the city while evading obstacles.
+I was going for something similar to parkour, but I couldn't implement that much, so I went with this which was much simpler.
+However, it captures the vibe of what I wanted, as players must jump to evade obstacles as they continue on through the levels.
+I also believe the way that I implemented the level system was original. With each level, the obstacles come at a faster speed, and have a smaller interval of time betwen their spawn lenghths.
+However, the player sees no changes with their own running or jumping style, so it makes the game more challenging.
+</li>
+
+<li><strong>Technical Merit:</strong>
+There a few aspects of technical merit for this game.
+One of them is the jumping ability. To add in this jumping ability I used a combination of gravity and velocity.
+Each time a player triggered the jump I used velocity to allow them to jump and then gravity to bring them back down.
+I also added and endless runner background, which continues scrolling forever, even after the player loses the game.
+Another aspect was the use of collision and overlap to get hit detection whenever the player came into contact with the obstacles.
+I also had a running animation for the player. I set up the endless scroller and gave each obstacle velocities, so that it would seem like the player was moving, even though they were not and everything around them was moving instead.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+I learned a lot about creating a side scroller or endless runner game. I had never created one before, so this was a great learning experience.
+The hardest part was figuring out how to balance the game. I had to tweak the jumping velocity and gravity multiple times to get it right and balanced.
+I also had to mess with the spawn rates and velocities of the obstacles as well. The easiest part was implementing the collision detection, which I've now done many times.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+All my prototype assets were found online from royatly free sources.
+<ul>
+<li>Punk Runner spritesheet: <a href="https://opengameart.org/content/punk-run-animation">Punk Runner</a></li>
+<li>Axe Player spritesheet: <a href="https://opengameart.org/content/minotaur-with-axe">Axe Player</a></li>
+<li>Platform image: <a href="https://opengameart.org/content/dirt-platform">Platform</a></li>
+<li>Heart image: <a href="https://opengameart.org/content/heart-2">Heart</a></li>
+<li>Powerup images: <a href="https://opengameart.org/content/pickup-hex-pack">Powerups</a></li>
+<li>Explosion spritesheet: <a href="https://ansimuz.itch.io/phaser-3-tutorial-part-9-collisions">Explosion</a></li>
+<li>Laser images: <a href="https://opengameart.org/content/3-lasers">Lasers</a></li>
+<li>Background Music: <a href="https://www.youtube.com/watch?v=i0XOYj6lqNw">Music</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+My game is similar to flappy bird in how it's an endless runner where you need to evade obstacles.
+</li>
+
+<li><strong>High Concept:</strong>
+In this game you will try to make it as far as you can while dodging obstacles in the city!
+</li>
+
+<li><strong>Theme:</strong>
+I didn't use any of the themes or challenges, as they were optional.
+</li>
+
+<li><strong>Mandated Variety:</strong>
+This game consists of direct input with the keyboard. The game is mostly deterministic, as players dicate when they want to jump.
+However, there is some randomness in where and when the obstacles show up. This game would appeal to competitors, performers, and achievers.
+</li>
+
+<li><strong>Prototype Goal:</strong>
+This protoype is mainly evaluating the balance between the jumping mechanic and the spawn of the obstacles.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+I want the players to feel like they're playing a quick and fun game that reminds them of mobile endless runners.
+</li>
+
+<li><strong>Gameplay:</strong>
+The runner will automatically move forward, so the player just needs to use the up arrow key to jump. Obstacles will appear in front of the player and they must time their jumps to avoid the obstacles.
+After 20 seconds, a new level will begin, where things get faster. This will continue until the player hits an obstacle and loses.
+</li>
+
+<li><strong>Strategies:</strong>
+The best strategy for the player is to perfectly time their jumps, so that they won't land too early or too late.
+This will be important, as it will affect the amount of time the player has to react to the next obstacle.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+Run through the city, as obstacles appear in your way. Only you can get past them and make it across the vast city!
+</li>
+
+<li><strong>Target Audience:</strong>
+The target audience are players that are looking for a fun mobile-style endless runner game.
+</li>
+
+<li><strong>Play Time:</strong>
+One round will take no longer than a minute to complete.
+</li>
+
+</ul>
+</div>
+
+<!-- main.js must come at the end since it expects the HTML to have been created. -->
+<script src="js/main.js" type="module"></script>
+</body>
+</html>
